@@ -68,12 +68,12 @@ Now that all the dependencies are install we can start building
 		cd marinecore/src
 		make -f makefile.unix USE_UPNP=-
 		strip marinecoind
-		cp marinecoind /usr/bin
+		sudo cp marinecoind /usr/bin
 		cd
 
 We have installed Marinecore for Marinecoin, now we will start the wallet once so that it can create the necessary data directories. Just type:
 
-		./marinecoind &
+		marinecoind &
 
 This will give us a warning message that the marinecoin.conf configuration file needs to be set in the .marinecoin hidden directory, type: (notice .marinecoin folder starts with a "dot" . )
 
@@ -92,25 +92,25 @@ press Ctrl+X to exit
 
 We have set the config file, now type: ./marinecoind & again to start the core wallet.
 
-		./marinecoind &
+		marinecoind &
 
 You should see a process id appear indicating the Marinecore has started successfully. To get the general status of the Daemon process type:
 
-		./marinecoind getinfo
+		marinecoind getinfo
 
 You should now see the blockchain is in the process of synchronization with other peers. Check using above "./marinecoind getinfo" to follow the progress until the entire Marinecoin blockchain download is complete, confirm the last block count from https://explorer.marinecoin.info. Once the Marinecore synchronization is complete, we can start using it in our tutorial projects to develop web apps and payment interactions amongst automated machines, robots and exchanges.
 
 Check your MTC balance with the following command
 
-		./marinecoind getbalance
+		marinecoind getbalance
 		
 List all the available commands
 
-		./marinecoind help
+		marinecoind help
 		
 List all the account names
 
-		./marinecoind listaccounts
+		marinecoind listaccounts
 		
 You should see this output for listaccounts
 
@@ -119,20 +119,20 @@ You should see this output for listaccounts
 		}
 The default account is "" - now we can get the MTC address of the default account by getaccountaddress command, just type:
 
-        ./marinecoind getaccountaddress ""
+        marinecoind getaccountaddress ""
         
 The output will give your Marinecoin default receiving address. Let's create a new account now.
 
-        ./marinecoind getnewaddress your_new_account_name
+        marinecoind getnewaddress your_new_account_name
         
 List all the account names
 
-        ./marinecoind listaccounts
-        ./marinecoind getaccountaddress your_new_account_name
+        marinecoind listaccounts
+        marinecoind getaccountaddress your_new_account_name
 
 Now that you created this MTC address you can receive Marinecoins to this address also. Send MTC to your new address from the exchange or your Mac or Windows GUI wallet. To check its balance just type:
 
-        ./marinecoind getbalance your_new_account_name 0
+        marinecoind getbalance your_new_account_name 0
         
 You should now see the sent amount on your new account. Above notice, we put a 0 at the end, that represents the number of confirmations on the network after receiving MTC. If we had entered 1 and no new block had confirmed the transaction since it had been sent, the balance would have still shown zero.
 
@@ -142,7 +142,7 @@ But first, since we are under development mode it would be a better option to sw
 
 First stop Marinecore
 
-		./marinecoind stop
+		marinecoind stop
 		
 Now we will edit the config file so that next time when we start Marinecore it will start on Sandbox mode.
 
@@ -168,7 +168,7 @@ press Ctrl+X to exit
 
 Type the following command to start Marinecore again. This time on Sandbox mode.
 
-		./marinecoind &
+		marinecoind &
 
 Now you can setup a web server to create your first web app, install LAMP server, place the two PHP files in marinecore/app to /var/www/html folder if you are on apache
 
@@ -185,7 +185,7 @@ If we check to see our account addresses, we will notice this time their first l
 
 We can either get free Sandbox MTC from the Marinecoin website's testnet faucet or by mining them with our CPU with a single command.
 
-        ./marinecoind setgenerate true 16
+        marinecoind setgenerate true 16
         
 After this command, your computer will start mining some Sandbox coins, leave it on for a few hours and check your balance. You can also mine the real MTC network this way.
 
@@ -193,6 +193,6 @@ So far with few short commands, we have established a connection to Marinecore w
 
 To send funds to another Marinecoin address from RPC console, change the PHP sample code accordingly to communicate from a web app, the below command will send 1200.125 MTC to the below MTC address if the wallet has enough balance
 
-        ./marinecoind sendtoaddress moQFE67TrB6kFZsA3XuWKTyeHqcDc8Hvfw 1200.125
+        marinecoind sendtoaddress moQFE67TrB6kFZsA3XuWKTyeHqcDc8Hvfw 1200.125
         
 By now you should have a basic understanding of the Marinecore blockchain and its capabilities to send and receive payments and the possibilities that it represents.
