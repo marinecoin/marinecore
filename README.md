@@ -99,3 +99,42 @@ You should see a process id appear indicating the Marinecore has started success
 		./marinecoind getinfo
 
 You should now see the blockchain is in the process of synchronization with other peers. Check using above "./marinecoind getinfo" to follow the progress until the entire Marinecoin blockchain download is complete, confirm the last block count from https://explorer.marinecoin.info. Once the Marinecore synchronization is complete, we can start using it in our tutorial projects to develop web apps and payment interactions amongst automated machines, robots and exchanges.
+
+Check your MTC balance with the following command
+
+		./marinecoind getbalance
+		
+List all the available commands
+
+		./marinecoind help
+		
+List all the account names
+
+		./marinecoind listaccounts
+		
+You should see this output for listaccounts
+
+		{
+		""
+		}
+The default account is "", now we can get the MTC address of the default account by getaccountaddress command, just type:
+
+		./marinecoind getaccountaddress ""
+		
+The output will give your Marinecoin default receiving address. Let's create a new account now.
+
+		./marinecoind getnewaddress your_new_account_name
+		
+List all the account names
+
+		./marinecoind listaccounts
+		./marinecoind getaccountaddress your_new_account_name
+
+Now that you created this MTC address you can receive Marinecoins to this address also. Send MTC to your new address. To check its balance.
+
+		./marinecoind getbalance your_new_account_name 0
+		
+You should now see the sent amount on your new account. Above notice we put a 0 at the end, that represents the number of confirmations on the network after receiving MTC. If we had entered 1 and no new block had confirmed the transaction since it had been sent, the balance would have still shown zero.
+
+
+		
