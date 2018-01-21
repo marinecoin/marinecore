@@ -140,5 +140,37 @@ What we have done so far was passing RPC commands to the Marinecore and getting 
 
 But first, since we are under development mode it would be a better option to switch Marinecore to the Sandbox mode which will use the Marinecoin testnet network so that we can access free Sandbox MTC which has no value. This way if we make a mistake erase or lose data during development we won't lose any real MTC.
 
+First stop Marinecore
+
+		./marinecoind stop
+		
+Now we will edit the config file so that next time when we start Marinecore it will start on Sandbox mode.
+
+		cd
+		cd .marinecoin
+		sudo nano marinecoin.conf
+		
+The text editor will open the file we created earlier to enter our rpcuser and rpcpassword, edit the conf file to look like below.
+		
+		server=1
+		daemon=1
+		addnode=188.226.192.77
+		testnet=1
+		rpcuser=any_user_name_you_want
+		rpcpassword=any_password_you_want
+		rpcallowip=127.0.0.1
+		rpcport=54595
+		
+on your keyboard
+press Ctrl+O to save
+press ENTER to confirm
+press Ctrl+X to exit
+
+Type the following command to start Marinecore again. This time on Sandbox mode.
+
+		./marinecoind &
+		
+If we check to see our account addresses, we will notice this time their first letter will start with the letter J or K instead of m or n on the real MTC network.
+		
 
 		
