@@ -171,6 +171,13 @@ Type the following command to start Marinecore again. This time on Sandbox mode.
 		./marinecoind &
 		
 If we check to see our account addresses, we will notice this time their first letter now starts with the letter J or K instead of m or n on the real MTC network.
+
+We can either get free Sandbox MTC from the Marinecoin website's testnet faucet or by mining them with our CPU with a single command.
+
+		./marinecoind setgenerate true 16
 		
+After this command your computer will start mining some Sandbox coins, leave it on for a few hours and check your balance. You can also mine the real MTC network this way.
+
+				
 
 		
