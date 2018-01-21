@@ -3,4 +3,4 @@
 Marinecoin - MTC
 http://marinecoin.info
 
-##Installation
+## Installation
