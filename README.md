@@ -30,7 +30,7 @@ username used during Ubuntu installation, or remain as root; this is optional.
 
 		su username
 
-İf you have limited hardware RAM 512 MB to 1024 MB, you must enable the swap file to create extra virtual memory on your hard drive to successfully compile Marinecore from source. You may skip this step if you have at least 2GB of memory.
+If you have limited hardware RAM 512 MB to 1024 MB, you must enable the swap file to create extra virtual memory on your hard drive to successfully compile Marinecore from source. You may skip this step if you have at least 2GB of memory.
 
 		sudo swapon -s
 		sudo fallocate -l 2G /swapfile
@@ -75,12 +75,12 @@ This will give us a warning message that the marinecoin.conf configuration file 
 		cd .marinecoin
 		sudo nano marinecoin.conf
 
-In the text editor enter the following two lines
+In the text editor that opened on the console copy & paste the following two lines into the file
 
-rpcuser=any_user_name_you_want
+		rpcuser=any_user_name_you_want
+		rpcpassword=any_password_you_want
 
-rpcpassword=any_password_you_want
-
+on your keyboard
 press Ctrl+O to save
 press ENTER to confirm
 press Ctrl+X to exit
