@@ -117,28 +117,28 @@ You should see this output for listaccounts
 		{
 		""
 		}
-The default account is "", now we can get the MTC address of the default account by getaccountaddress command, just type:
+The default account is "" - now we can get the MTC address of the default account by getaccountaddress command, just type:
 
-		./marinecoind getaccountaddress ""
-		
+        ./marinecoind getaccountaddress ""
+        
 The output will give your Marinecoin default receiving address. Let's create a new account now.
 
-		./marinecoind getnewaddress your_new_account_name
-		
+        ./marinecoind getnewaddress your_new_account_name
+        
 List all the account names
 
-		./marinecoind listaccounts
-		./marinecoind getaccountaddress your_new_account_name
+        ./marinecoind listaccounts
+        ./marinecoind getaccountaddress your_new_account_name
 
-Now that you created this MTC address you can receive Marinecoins to this address also. Send MTC to your new address from the exchange or from your Mac or Windows GUI wallet. To check its balance.
+Now that you created this MTC address you can receive Marinecoins to this address also. Send MTC to your new address from the exchange or your Mac or Windows GUI wallet. To check its balance just type:
 
-		./marinecoind getbalance your_new_account_name 0
-		
-You should now see the sent amount on your new account. Above notice we put a 0 at the end, that represents the number of confirmations on the network after receiving MTC. If we had entered 1 and no new block had confirmed the transaction since it had been sent, the balance would have still shown zero.
+        ./marinecoind getbalance your_new_account_name 0
+        
+You should now see the sent amount on your new account. Above notice, we put a 0 at the end, that represents the number of confirmations on the network after receiving MTC. If we had entered 1 and no new block had confirmed the transaction since it had been sent, the balance would have still shown zero.
 
-What we have done so far was passing RPC commands to the Marinecore and getting status of the wallet database and the blockchain status using the console. We can use these commands in our projects and have our custom apps, databases, or web sites access the same wallet information using an RPC connection and do many more cool things with it.
+What we have done so far was passing RPC commands to the Marinecore and getting status of the wallet database and the blockchain status using the console. We can use these commands in our projects and have our custom apps, databases, or websites access the same wallet information using an RPC connection and do many more cool things with it.
 
-But first, since we are under development mode it would be a better option to switch Marinecore to the Sandbox mode which will use the Marinecoin testnet network, so that we can access free Sandbox MTC which have no value. This way if we make a mistake erase or lose data during development we won't lose any real MTC.
+But first, since we are under development mode it would be a better option to switch Marinecore to the Sandbox mode which will use the Marinecoin testnet network so that we can access free Sandbox MTC which has no value. This way if we make a mistake erase or lose data during development we won't lose any real MTC.
 
 
 		
