@@ -8,7 +8,7 @@ http://marinecoin.info
 Recommended and tested installation platform Ubuntu 14.04 Server or Desktop, Ubuntu 16.04 Server or Desktop. Installation may require additional steps on other flavors of Unix based operating systems.  On local machines during Ubuntu installation select location "United States"  and language as "English" keyboard layout does not matter, if you select other countries dependency installation may not have access to some of the required repositories.
 
 Clean install your preferred Ubuntu OS on a VPS or a local machine with at least 512MB Ram.
-Tutorial on setting up ubuntu can be found here. https://www.wikihow.com/Install-Ubuntu-Linux
+Tutorial on setting up ubuntu can be found [here.](https://www.wikihow.com/Install-Ubuntu-Linux)
 
 After you are up and running on Ubuntu, run the Terminal application if you are on the Desktop version to access the command line area.
 
