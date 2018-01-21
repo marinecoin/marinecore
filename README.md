@@ -14,10 +14,12 @@ Make sure your locales are set permanently, to do that you must have root access
 Setting Locale switch set the password for root, switch to root user with the following commands
 
 		sudo passwd root
-"enter and confirm the root password"
+		
+Enter and confirm the root password on prompt
+
 		su root
 
-copy paste the following four lines as root
+Enter the following four lines one by one as root
 
 		export LC_ALL="en_US.UTF-8"
 		export LANGUAGE="en_US.UTF-8"
@@ -26,7 +28,7 @@ copy paste the following four lines as root
 
 That's it for locale now switch to the other user or stay as root as per your requirements to install Marinecore dependencies.
 
-username used during Ubuntu installation, or remain as root; this is optional.
+Switch to username used during Ubuntu installation, or remain as root; this is optional depending on your project requirements.
 
 		su username
 
