@@ -170,7 +170,7 @@ Type the following command to start Marinecore again. This time on Sandbox mode.
 
 		./marinecoind &
 		
-If we check to see our account addresses, we will notice this time their first letter will start with the letter J or K instead of m or n on the real MTC network.
+If we check to see our account addresses, we will notice this time their first letter now starts with the letter J or K instead of m or n on the real MTC network.
 		
 
 		
