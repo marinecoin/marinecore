@@ -61,7 +61,7 @@ Let's intall the dependencies with the following commands
 Now that all the dependencies are install we can start building
 
 		cd
-		sudo git clone https://github.com/jarviscoin/marinecore.git
+		sudo git clone https://github.com/marinecoin/marinecore.git
 		cd marinecore/src
 		make -f makefile.unix USE_UPNP=-
 		strip marinecoind
