@@ -152,12 +152,12 @@ Now we will edit the config file so that next time when we start Marinecore it w
 		
 The text editor will open the file we created earlier to enter our rpcuser and rpcpassword, edit the conf file to look like below.
 		
+		rpcuser=testuser
+		rpcpassword=testpassword
 		server=1
-		daemon=1
-		addnode=188.226.192.77
+		listen=1
 		testnet=1
-		rpcuser=any_user_name_you_want
-		rpcpassword=any_password_you_want
+		addnode=188.226.192.77
 		rpcallowip=127.0.0.1
 		rpcport=54595
 		
@@ -169,15 +169,30 @@ press Ctrl+X to exit
 Type the following command to start Marinecore again. This time on Sandbox mode.
 
 		./marinecoind &
-		
+
+Now you can setup a web server to create your first web app, install LAMP server, place the two PHP files in marinecore/app to /var/www/html folder if you are on apache
+
+        cd
+        sudo cp marinecore/app/marinecoin.php /var/www/html/marinecoin.php
+        sudo cp marinecore/app/app.php /var/www/html/app.php
+        sudo apt-get install php-curl
+        sudo service apache2 restart
+        
+On your web browser navigate to the app.php file http://your_server_ip_address/app.php
+You should now see the current Marinecoin network block count above and the current Sandbox wallet balance below.
+
 If we check to see our account addresses, we will notice this time their first letter now starts with the letter J or K instead of m or n on the real MTC network.
 
 We can either get free Sandbox MTC from the Marinecoin website's testnet faucet or by mining them with our CPU with a single command.
 
-		./marinecoind setgenerate true 16
-		
-After this command your computer will start mining some Sandbox coins, leave it on for a few hours and check your balance. You can also mine the real MTC network this way.
+        ./marinecoind setgenerate true 16
+        
+After this command, your computer will start mining some Sandbox coins, leave it on for a few hours and check your balance. You can also mine the real MTC network this way.
 
-		
+So far with few short commands, we have established a connection to Marinecore with a simple web application. Other programming languages can also be used to connect to the Core Marinecoin wallet as similar to the PHP example shown. From there database storage and other GUI representations of the wallet information can be achieved.
 
-		
+To send funds to another Marinecoin address from RPC console, change the PHP sample code accordingly to communicate from a web app, the below command will send 1200.125 MTC to the below MTC address if the wallet has enough balance
+
+        ./marinecoind sendtoaddress moQFE67TrB6kFZsA3XuWKTyeHqcDc8Hvfw 1200.125
+        
+By now you should have a basic understanding of the Marinecore blockchain and its capabilities to send and receive payments and the possibilities that it represents.
