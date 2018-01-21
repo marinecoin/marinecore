@@ -32,17 +32,17 @@ su username
 
 İf you have limited hardware RAM 512 MB to 1024 MB, you must enable the swap file to create extra virtual memory on your hard drive to successfully compile Marinecore from source. You may skip this step if you have at least 2GB of memory.
 
-sudo swapon -s
-sudo fallocate -l 2G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo sysctl vm.swappiness=10
-sudo sysctl vm.vfs_cache_pressure=50
-sudo cp /etc/fstab /etc/fstab.bak
-echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-echo 'vm.swappiness=10' >> /etc/sysctl.conf
-echo 'vm.vfs_cache_pressure=50' >> /etc/sysctl.conf
+		sudo swapon -s
+		sudo fallocate -l 2G /swapfile
+		sudo chmod 600 /swapfile
+		sudo mkswap /swapfile
+		sudo swapon /swapfile
+		sudo sysctl vm.swappiness=10
+		sudo sysctl vm.vfs_cache_pressure=50
+		sudo cp /etc/fstab /etc/fstab.bak
+		echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+		echo 'vm.swappiness=10' >> /etc/sysctl.conf
+		echo 'vm.vfs_cache_pressure=50' >> /etc/sysctl.conf
 
 Let's intall the dependencies with the following commands
 
