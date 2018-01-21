@@ -1,4 +1,4 @@
 # Marinecore
 
 Marinecoin - MTC
-htttp://marinecoin.info
+http://marinecoin.info
