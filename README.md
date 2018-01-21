@@ -178,6 +178,6 @@ We can either get free Sandbox MTC from the Marinecoin website's testnet faucet 
 		
 After this command your computer will start mining some Sandbox coins, leave it on for a few hours and check your balance. You can also mine the real MTC network this way.
 
-				
+		
 
 		
