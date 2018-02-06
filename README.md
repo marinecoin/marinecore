@@ -66,7 +66,7 @@ Now that all the dependencies are install we can start building
 		cd
 		sudo git clone https://github.com/marinecoin/marinecore.git
 		cd marinecore/src
-		make -f makefile.unix USE_UPNP=-
+		sudo make -f makefile.unix USE_UPNP=-
 		strip marinecoind
 		sudo cp marinecoind /usr/bin
 		cd
