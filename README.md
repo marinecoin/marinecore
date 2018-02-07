@@ -61,7 +61,7 @@ Let's intall the dependencies with the following commands
  		sudo apt-get install libboost-all-dev
 		sudo apt-get -y install git
 
-Now that all the dependencies are install we can start building
+Now that all the dependencies are installed, we can start building
 
 		cd
 		sudo git clone https://github.com/marinecoin/marinecore.git
